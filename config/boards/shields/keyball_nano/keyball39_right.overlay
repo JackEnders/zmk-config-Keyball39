@@ -71,6 +71,11 @@
     device = <&trackball>;
     input-processors = <&zip_temp_layer 4 500>;
 
+    snipe {
+      layers = <6>;
+      input-processors = <&zip_xy_scaler 1 3 &zip_temp_layer 4 500>;
+    };
+
     scroller {
       layers = <5>;
       input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 5>, <&zip_xy_to_scroll_mapper>;
